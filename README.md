@@ -42,9 +42,6 @@
 | Contribuições (últimos 12 meses) | 921 |
 | Linguagens principais | Python · Jupyter Notebook |
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=andreluizpedroso&show_icons=true&theme=github_dark&hide_border=true&count_private=false)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=andreluizpedroso&layout=compact&theme=github_dark&hide_border=true)
-
 ## 🚀 Projetos em destaque
 
 - **Servidor MCP (Model Context Protocol)** — servidor expondo tools, resources e prompts para agentes de IA

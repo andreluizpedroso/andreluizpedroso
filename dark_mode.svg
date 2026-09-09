@@ -1,74 +1,84 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="Consolas,'SFMono-Regular','Courier New',monospace" width="1046px" height="560px" font-size="14px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Consolas,'SFMono-Regular','Courier New',monospace" width="1197px" height="590px" font-size="14px">
 <style>
 .key {fill: #e3b341;}
 .value {fill: #79c0ff;}
 .cc {fill: #6e7681;}
 text, tspan {white-space: pre;}
 </style>
-<rect width="1046px" height="560px" fill="#0d1117" rx="12"/>
+<rect width="1197px" height="590px" fill="#0d1117" rx="12"/>
 <text x="15" y="30" fill="#c9d1d9">
-<tspan x="15" y="30">+-:::=++++=:::-++=-:..::-=+++-:::-=+++++++++</tspan>
-<tspan x="15" y="45">=-..:=++++-:.:--:...      :-=-:::-====++====</tspan>
-<tspan x="15" y="60">=-..:-++++-..::...         .:-:::-====+++===</tspan>
-<tspan x="15" y="75">=:..:-====-:--:..         ...:::::======+++=</tspan>
-<tspan x="15" y="90">=:..:-=======-::..        ...:-::-=====-=+++</tspan>
-<tspan x="15" y="105">=:..:-====**=--:..        ...:+-.:====-.:=++</tspan>
-<tspan x="15" y="120">=:..:-===+%%*=====-:. .:=+++==++  -===-  :++</tspan>
-<tspan x="15" y="135">=-:::====+%%#######*=:-+**+=+*=*-:=====:.:=+</tspan>
-<tspan x="15" y="150">=-:::=====%%#%%*+*#%*..=***+++=+:.-===-..:-+</tspan>
-<tspan x="15" y="165">=-:::-====#%#%###*===:.::-==-:-=-:-===-  .:-</tspan>
-<tspan x="15" y="180">=::::-====#%*+-=-:..:: .. ....:==--====-::::</tspan>
-<tspan x="15" y="195">=::::-===+#%#+=-::::=-:--:...:-+-:-====-::::</tspan>
-<tspan x="15" y="210">=:.::-====*%%#*+--:-#@%#*-...--+=:-====-::::</tspan>
-<tspan x="15" y="225">=:..:-====+%@#*+=::=#%#**+=-:==*=:-====-::::</tspan>
-<tspan x="15" y="240">=:..:-=====*@%#*+=*%#*+=+*##=+##-:-====-::::</tspan>
-<tspan x="15" y="255">=:..:-====-:*@@%#*%%#=---=+#++%*::-====:::::</tspan>
-<tspan x="15" y="270">=:...-====-:-%@@%%%#*####+-+##%=.:-====:.:::</tspan>
-<tspan x="15" y="285">=:...-====-::*@@@@%#*#%%#+=*%%#:.:-====:..::</tspan>
-<tspan x="15" y="300">=:...-====-.:+%@@@@%%%%%%##%@%+..:-====:...:</tspan>
-<tspan x="15" y="315">=: ..-====-..+%%@@@@@@@@@@@@%*=..:-====:....</tspan>
-<tspan x="15" y="330">=:  .-====:.-#%%%%@@@@@@@@%#*+=...---==:....</tspan>
-<tspan x="15" y="345">=:  .-=--=+++#%%%%%%%%%%#**++++-..-=---:....</tspan>
-<tspan x="15" y="360">=:  .-=+**#%**#%%%%#####***+++==-:.=++=: ...</tspan>
-<tspan x="15" y="375">-..-=++*%**#%%##%%%##*******+=-:..:****=:.  </tspan>
-<tspan x="15" y="390">==++##++*#*###%@@@@@%#*###*+-----=**++-:.:-=</tspan>
-<tspan x="15" y="405">####*####***%###%%@@@@%%%%##****#*=:. .=*%%#</tspan>
+<tspan x="15" y="30">+=-:::-=++++++=-::::-++++==-::----=++++++=-::::=++++++++++++++</tspan>
+<tspan x="15" y="45">+=:::::-++++++=-::::-++=-::........:-=+++-:::::-++++++++======</tspan>
+<tspan x="15" y="60">+=:::::-++++++=-::::--:...........   .:=+=:::::-=====++++=====</tspan>
+<tspan x="15" y="75">+=:::::-++++++=::.:-:::.................--:::::-======+*+++===</tspan>
+<tspan x="15" y="90">+=:::::-++++++=::-=-::....         ...::.::::::-=======+*+++==</tspan>
+<tspan x="15" y="105">+=:.:::-++++=+=-==--::...          ....:::-::::-=======-+**+++</tspan>
+<tspan x="15" y="120">+=:::::-+======*==----::.......  ......:::-=:::-=======:-++*++</tspan>
+<tspan x="15" y="135">+=:::::-+=====*#+==---::........    ....:-=*-.:-=======-.-+++*</tspan>
+<tspan x="15" y="150">+=:::::-+=====#%#*==---::..........--=--:-=*=   ======-   ++++</tspan>
+<tspan x="15" y="165">+=:::::-======%%%#+=+****+=-:...-+*###*+**-*#  .======-   .+++</tspan>
+<tspan x="15" y="180">+=::::-=======%@%##%###%%###+-=-**+*+--=+#+=%-:-=======-:::=++</tspan>
+<tspan x="15" y="195">==::::-=======%@#*%%#*+=+####=..=*##**+++++-#=:-=======-::--++</tspan>
+<tspan x="15" y="210">==::::-=======#@#*%%%#*##*###=. :=+++*++===-*- .-=====-   .--+</tspan>
+<tspan x="15" y="225">==::::-=======+@#*%%*#%*+=---=:.:...:---::--==+:-=====-. .:--=</tspan>
+<tspan x="15" y="240">=-:::::-======+@%**=-===-:..-=:..:........:-=+=-=======-------</tspan>
+<tspan x="15" y="255">=-:::::-=====*#%%#+=-:::::::--:..:::....::-=++::=======-::----</tspan>
+<tspan x="15" y="270">=-:::::-=====+*%%##*+=---::-+#*++**=::..:-==++:-=======-::----</tspan>
+<tspan x="15" y="285">=-:::::-======*#@%###*=--::-%@@%%##=...::---+*--=======-::::--</tspan>
+<tspan x="15" y="300">=-:::::-======**@%#***=--::=#%%%##*+==-::===#*-:=======-:::::-</tspan>
+<tspan x="15" y="315">=-:::::-=======*@@%#+++==-*##**+=+***#*=-+**%+:-=======-::::::</tspan>
+<tspan x="15" y="330">=-:.:::-======-=+%@%%%#*+*%%%%**+++*#%%#-+%#%-:-=======-::::::</tspan>
+<tspan x="15" y="345">=-:.:::-======-:.*@@%%%#+#@@%+-::::-==##=+%%*::-=======-::::::</tspan>
+<tspan x="15" y="360">=-:...:-======-::-%@@@@%#%%*+*******=-=%*##%+::-=======-::::::</tspan>
+<tspan x="15" y="375">=-:...:-=======:::+@@@@@@%%##%%@@%%*--+%#%%#::::=======-::::::</tspan>
+<tspan x="15" y="390">=-:...:-=======:::=%@@@@%@@#**###%#+==*%%%@=::::=======-::::::</tspan>
+<tspan x="15" y="405">=-....:-======-:::-#%@@@@@@%%%%%%%#####%%%#-::::=======-::::::</tspan>
+<tspan x="15" y="420">=-....:-======-::::#%%@@@@@@@@@@@@@@%@@@@#*-.:.:=======-:.::::</tspan>
+<tspan x="15" y="435">=-.....-======-::::#%%%%@@@@@@@@@@@@@@@%*+*-...:=======-:.::::</tspan>
+<tspan x="15" y="450">=-.....-======-..:*%%%%%%%@@@@@@@@@@%##*+++=...:-======-...:::</tspan>
+<tspan x="15" y="465">=-.....-===----==+%%%%%%%%%%%%%%%%##*****+++-..:==--===-...:::</tspan>
+<tspan x="15" y="480">=-.....-=-==+**%#=+%%%%%%#%%%%%####*****++++=-::-====-=-....::</tspan>
+<tspan x="15" y="495">=-.....-=+*%%+###%**#%%%%%%#######*****+++===-::.:***+=:. ...:</tspan>
+<tspan x="15" y="510">=-..:-+++**#%++%##@%###%%%%####********++==--::.:+##***+=-:.  </tspan>
+<tspan x="15" y="525">=--+**##++=+##+#%##%@@%%%%%%##*#######+=-:::.::-*#*+**+=-.  .-</tspan>
+<tspan x="15" y="540">****++*%#+#*+#**#%###%@@@@@@@%#*#*###*====+++*###*++=:  .-+###</tspan>
+<tspan x="15" y="555">##%%%#**%#*@**#+*%%*####%%@@@@@@@@@@%%%%%%#####*=-.  :=*%%%%%#</tspan>
 </text>
-<text x="404.6" y="30" fill="#c9d1d9">
-<tspan x="404.6" y="30">andreluizpedroso@github</tspan>
-<tspan x="404.6" y="45" class="cc">----------------------------------------</tspan>
-<tspan x="404.6" y="60" class="key">OS</tspan><tspan class="cc">: </tspan><tspan class="value">Machine Learning Engineer / Senior Data Engineer</tspan>
-<tspan x="404.6" y="75" class="key">Host</tspan><tspan class="cc">: </tspan><tspan class="value">Consultoria Independente em Dados e IA (desde 2013)</tspan>
-<tspan x="404.6" y="90" class="key">Kernel</tspan><tspan class="cc">: </tspan><tspan class="value">Python 3.x | SQL | R</tspan>
-<tspan x="404.6" y="105" class="key">Uptime</tspan><tspan class="cc">: </tspan><tspan class="value">10+ anos de experiencia em dados</tspan>
-<tspan x="404.6" y="120" class="key">Shell</tspan><tspan class="cc">: </tspan><tspan class="value">FastAPI + Docker + Kubernetes</tspan>
-<tspan x="404.6" y="135" class="key">DE</tspan><tspan class="cc">: </tspan><tspan class="value">dbt | Airflow | Spark | Data Lakehouse</tspan>
-<tspan x="404.6" y="150" class="key">MLOps</tspan><tspan class="cc">: </tspan><tspan class="value">MLflow | CI/CD | Evidently AI | Feast</tspan>
-<tspan x="404.6" y="165" class="key">Cloud</tspan><tspan class="cc">: </tspan><tspan class="value">GCP (BigQuery, Vertex AI) | AWS (SageMaker) | Azure ML | Databricks</tspan>
-<tspan x="404.6" y="180" class="key">ML/DL</tspan><tspan class="cc">: </tspan><tspan class="value">Scikit-learn | TensorFlow | PyTorch | XGBoost | LightGBM</tspan>
-<tspan x="404.6" y="195" class="key">GenAI</tspan><tspan class="cc">: </tspan><tspan class="value">LLMs | Prompt Engineering | NLP | MCP (Model Context Protocol)</tspan>
-<tspan x="404.6" y="210" class="key">BI</tspan><tspan class="cc">: </tspan><tspan class="value">Power BI | Tableau | Looker Studio | Metabase</tspan>
-<tspan x="404.6" y="225" class="key">Languages</tspan><tspan class="cc">: </tspan><tspan class="value">Portugues (nativo) | Ingles (C2 Fluente)</tspan>
-<tspan x="404.6" y="240" class="key">Locale</tspan><tspan class="cc">: </tspan><tspan class="value">Barueri, SP, Brasil</tspan>
-<tspan x="404.6" y="255" class="cc">----------------------------------------</tspan>
-<tspan x="404.6" y="270">Contact</tspan>
-<tspan x="404.6" y="285" class="key">Email</tspan><tspan class="cc">: </tspan><tspan class="value">andreluizp87@gmail.com</tspan>
-<tspan x="404.6" y="300" class="key">LinkedIn</tspan><tspan class="cc">: </tspan><tspan class="value">linkedin.com/in/andreluizpedroso</tspan>
-<tspan x="404.6" y="315" class="key">Portfolio</tspan><tspan class="cc">: </tspan><tspan class="value">portifolio-andre-pedroso.vercel.app</tspan>
-<tspan x="404.6" y="330" class="cc">----------------------------------------</tspan>
-<tspan x="404.6" y="345" class="key">Formacao</tspan><tspan class="cc">: </tspan><tspan class="value">Pos-Tech Machine Learning Engineering - FIAP (2025)</tspan>
-<tspan x="404.6" y="360" class="value">Pos-Tech Data Analytics - FIAP (2024)</tspan>
-<tspan x="404.6" y="375" class="value">Bacharel em Sistemas de Informacao - UNINOVE (2022)</tspan>
-<tspan x="404.6" y="390" class="cc">----------------------------------------</tspan>
-<tspan x="404.6" y="405" class="key">Experiencia</tspan><tspan class="cc">: </tspan><tspan class="value">NIO Tecnologia - Senior Data Analyst (jul/2025 - jan/2026)</tspan>
-<tspan x="404.6" y="420" class="value">Kumon Brasil - Senior Data Analyst (nov/2023 - abr/2025)</tspan>
-<tspan x="404.6" y="435" class="value">Consultoria Independente - Especialista em Dados e IA (desde 2013)</tspan>
-<tspan x="404.6" y="450" class="cc">----------------------------------------</tspan>
-<tspan x="404.6" y="465">GitHub Stats</tspan>
-<tspan x="404.6" y="480" class="key">Repos</tspan><tspan class="cc">: </tspan><tspan class="value" id="repo_data">18</tspan>
-<tspan x="404.6" y="495" class="value" id="star_data">Stars: 0 | Forks: 0</tspan>
-<tspan x="404.6" y="510" class="key">Commits</tspan><tspan class="cc">: </tspan><tspan class="value" id="commit_data">236</tspan>
-<tspan x="404.6" y="525" class="value" id="follower_data">Followers: 7 | Following: 13</tspan>
+<text x="555.8000000000001" y="30" fill="#c9d1d9">
+<tspan x="555.8000000000001" y="30">andreluizpedroso@github</tspan>
+<tspan x="555.8000000000001" y="45" class="cc">----------------------------------------</tspan>
+<tspan x="555.8000000000001" y="60" class="key">OS</tspan><tspan class="cc">: </tspan><tspan class="value">Machine Learning Engineer / Senior Data Engineer</tspan>
+<tspan x="555.8000000000001" y="75" class="key">Host</tspan><tspan class="cc">: </tspan><tspan class="value">Consultoria Independente em Dados e IA (desde 2013)</tspan>
+<tspan x="555.8000000000001" y="90" class="key">Kernel</tspan><tspan class="cc">: </tspan><tspan class="value">Python 3.x | SQL | R</tspan>
+<tspan x="555.8000000000001" y="105" class="key">Uptime</tspan><tspan class="cc">: </tspan><tspan class="value">10+ anos de experiencia em dados</tspan>
+<tspan x="555.8000000000001" y="120" class="key">Shell</tspan><tspan class="cc">: </tspan><tspan class="value">FastAPI + Docker + Kubernetes</tspan>
+<tspan x="555.8000000000001" y="135" class="key">DE</tspan><tspan class="cc">: </tspan><tspan class="value">dbt | Airflow | Spark | Data Lakehouse</tspan>
+<tspan x="555.8000000000001" y="150" class="key">MLOps</tspan><tspan class="cc">: </tspan><tspan class="value">MLflow | CI/CD | Evidently AI | Feast</tspan>
+<tspan x="555.8000000000001" y="165" class="key">Cloud</tspan><tspan class="cc">: </tspan><tspan class="value">GCP (BigQuery, Vertex AI) | AWS (SageMaker) | Azure ML | Databricks</tspan>
+<tspan x="555.8000000000001" y="180" class="key">ML/DL</tspan><tspan class="cc">: </tspan><tspan class="value">Scikit-learn | TensorFlow | PyTorch | XGBoost | LightGBM</tspan>
+<tspan x="555.8000000000001" y="195" class="key">GenAI</tspan><tspan class="cc">: </tspan><tspan class="value">LLMs | Prompt Engineering | NLP | MCP (Model Context Protocol)</tspan>
+<tspan x="555.8000000000001" y="210" class="key">BI</tspan><tspan class="cc">: </tspan><tspan class="value">Power BI | Tableau | Looker Studio | Metabase</tspan>
+<tspan x="555.8000000000001" y="225" class="key">Languages</tspan><tspan class="cc">: </tspan><tspan class="value">Portugues (nativo) | Ingles (C2 Fluente)</tspan>
+<tspan x="555.8000000000001" y="240" class="key">Locale</tspan><tspan class="cc">: </tspan><tspan class="value">Barueri, SP, Brasil</tspan>
+<tspan x="555.8000000000001" y="255" class="cc">----------------------------------------</tspan>
+<tspan x="555.8000000000001" y="270">Contact</tspan>
+<tspan x="555.8000000000001" y="285" class="key">Email</tspan><tspan class="cc">: </tspan><tspan class="value">andreluizp87@gmail.com</tspan>
+<tspan x="555.8000000000001" y="300" class="key">LinkedIn</tspan><tspan class="cc">: </tspan><tspan class="value">linkedin.com/in/andreluizpedroso</tspan>
+<tspan x="555.8000000000001" y="315" class="key">Portfolio</tspan><tspan class="cc">: </tspan><tspan class="value">portifolio-andre-pedroso.vercel.app</tspan>
+<tspan x="555.8000000000001" y="330" class="cc">----------------------------------------</tspan>
+<tspan x="555.8000000000001" y="345" class="key">Formacao</tspan><tspan class="cc">: </tspan><tspan class="value">Pos-Tech Machine Learning Engineering - FIAP (2025)</tspan>
+<tspan x="555.8000000000001" y="360" class="value">Pos-Tech Data Analytics - FIAP (2024)</tspan>
+<tspan x="555.8000000000001" y="375" class="value">Bacharel em Sistemas de Informacao - UNINOVE (2022)</tspan>
+<tspan x="555.8000000000001" y="390" class="cc">----------------------------------------</tspan>
+<tspan x="555.8000000000001" y="405" class="key">Experiencia</tspan><tspan class="cc">: </tspan><tspan class="value">NIO Tecnologia - Senior Data Analyst (jul/2025 - jan/2026)</tspan>
+<tspan x="555.8000000000001" y="420" class="value">Kumon Brasil - Senior Data Analyst (nov/2023 - abr/2025)</tspan>
+<tspan x="555.8000000000001" y="435" class="value">Consultoria Independente - Especialista em Dados e IA (desde 2013)</tspan>
+<tspan x="555.8000000000001" y="450" class="cc">----------------------------------------</tspan>
+<tspan x="555.8000000000001" y="465">GitHub Stats</tspan>
+<tspan x="555.8000000000001" y="480" class="key">Repos</tspan><tspan class="cc">: </tspan><tspan class="value" id="repo_data">18</tspan>
+<tspan x="555.8000000000001" y="495" class="value" id="star_data">Stars: 0 | Forks: 0</tspan>
+<tspan x="555.8000000000001" y="510" class="key">Commits</tspan><tspan class="cc">: </tspan><tspan class="value" id="commit_data">237</tspan>
+<tspan x="555.8000000000001" y="525" class="value" id="follower_data">Followers: 7 | Following: 13</tspan>
 </text>
 </svg>

@@ -36,9 +36,18 @@ HEADERS = {"Accept": "application/vnd.github+json"}
 if ACCESS_TOKEN:
     HEADERS["Authorization"] = f"Bearer {ACCESS_TOKEN}"
 
-ART_COLS = 44
+ART_COLS = 62
 ART_ASPECT_CORRECTION = 0.58  # compensa a proporcao ~2:1 (altura:largura) do caractere monoespacado
-RAMP = " .:-=+*#%@"  # do mais claro/esparso ao mais escuro/denso
+RAMP = " .:-=+*#%@"  # do mais claro/esparso ao mais escuro/denso (ramp classico; a nitidez
+# percebida vem do pre-processamento da imagem, nao da ordem dos caracteres — testamos
+# reordenar por densidade de tinta medida e o resultado ficou pior, pois glifos como "*"
+# tem formato visualmente "ruidoso" apesar de pouca tinta)
+
+# Parametros de pre-processamento da conversao para ASCII (ver image_to_ascii)
+ART_BLUR_RADIUS = 1.2       # blur leve so pra reduzir ruido/artefato de JPEG antes do sharpen
+ART_UNSHARP_RADIUS = 2
+ART_UNSHARP_PERCENT = 120   # realca bordas (oculos, nariz, contorno da barba)
+ART_AUTOCONTRAST_CUTOFF = 1  # curva suave: preserva gradacao nos tons medios (evita saturar em # % @)
 
 FONT_SIZE = 14
 CHAR_W = 8.4          # largura aproximada de um caractere monoespacado a FONT_SIZE=14 (Consolas-like)
@@ -147,12 +156,17 @@ def fetch_avatar(username):
 
 def image_to_ascii(img, cols=ART_COLS, aspect=ART_ASPECT_CORRECTION):
     gray = img.convert("L")
-    gray = gray.filter(ImageFilter.GaussianBlur(radius=max(1, img.width // 130)))
-    gray = ImageOps.autocontrast(gray, cutoff=1)
+    # blur leve (reduz ruido) seguido de sharpen (define bordas: oculos, nariz, barba)
+    gray = gray.filter(ImageFilter.GaussianBlur(radius=ART_BLUR_RADIUS))
+    gray = gray.filter(
+        ImageFilter.UnsharpMask(radius=ART_UNSHARP_RADIUS, percent=ART_UNSHARP_PERCENT, threshold=2)
+    )
+    # autocontraste UNICO e suave: aplicar duas vezes (uma no tamanho original, outra
+    # depois do resize) "estourava" tons medios do rosto em caracteres densos cedo demais
+    gray = ImageOps.autocontrast(gray, cutoff=ART_AUTOCONTRAST_CUTOFF)
 
     rows = round(gray.height / gray.width * cols * aspect)
     small = gray.resize((cols, rows), Image.LANCZOS)
-    small = ImageOps.autocontrast(small, cutoff=0)
     pixels = small.load()
 
     n = len(RAMP)

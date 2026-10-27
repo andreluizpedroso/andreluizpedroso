@@ -78,7 +78,7 @@ text, tspan {white-space: pre;}
 <tspan x="555.8000000000001" y="465">GitHub Stats</tspan>
 <tspan x="555.8000000000001" y="480" class="key">Repos</tspan><tspan class="cc">: </tspan><tspan class="value" id="repo_data">21</tspan>
 <tspan x="555.8000000000001" y="495" class="value" id="star_data">Stars: 0 | Forks: 0</tspan>
-<tspan x="555.8000000000001" y="510" class="key">Commits</tspan><tspan class="cc">: </tspan><tspan class="value" id="commit_data">259</tspan>
-<tspan x="555.8000000000001" y="525" class="value" id="follower_data">Followers: 6 | Following: 14</tspan>
+<tspan x="555.8000000000001" y="510" class="key">Commits</tspan><tspan class="cc">: </tspan><tspan class="value" id="commit_data">263</tspan>
+<tspan x="555.8000000000001" y="525" class="value" id="follower_data">Followers: 7 | Following: 14</tspan>
 </text>
 </svg>

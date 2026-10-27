@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """
 Gera o SVG do README de perfil do GitHub (dark_mode.svg e light_mode.svg)
-no estilo "neofetch de terminal": foto convertida em ASCII art à esquerda,
-specs coloridas e estatisticas reais do GitHub à direita.
+no estilo "neofetch de terminal": specs coloridas e estatisticas reais do GitHub.
 
 Inspirado na abordagem de github.com/Andrew6rant/Andrew6rant (today.py):
-um script gera um SVG estatico a partir de dados da API do GitHub e de
-uma foto de perfil, e uma GitHub Action roda esse script periodicamente
+um script gera um SVG estatico a partir de dados da API do GitHub, e uma GitHub Action roda esse script periodicamente
 e faz commit do resultado.
 
 Uso:
@@ -17,12 +15,10 @@ Variaveis de ambiente opcionais:
     ACCESS_TOKEN  -> token para autenticar na API do GitHub (maior rate limit).
                      Em GitHub Actions, o GITHUB_TOKEN padrao já serve.
 """
-import io
 import os
 import sys
 
 import requests
-from PIL import Image, ImageOps, ImageFilter
 
 # --------------------------------------------------------------------------
 # Configuracao
@@ -36,25 +32,11 @@ HEADERS = {"Accept": "application/vnd.github+json"}
 if ACCESS_TOKEN:
     HEADERS["Authorization"] = f"Bearer {ACCESS_TOKEN}"
 
-ART_COLS = 62
-ART_ASPECT_CORRECTION = 0.58  # compensa a proporcao ~2:1 (altura:largura) do caractere monoespacado
-RAMP = " .:-=+*#%@"  # do mais claro/esparso ao mais escuro/denso (ramp classico; a nitidez
-# percebida vem do pre-processamento da imagem, nao da ordem dos caracteres — testamos
-# reordenar por densidade de tinta medida e o resultado ficou pior, pois glifos como "*"
-# tem formato visualmente "ruidoso" apesar de pouca tinta)
-
-# Parametros de pre-processamento da conversao para ASCII (ver image_to_ascii)
-ART_BLUR_RADIUS = 1.2       # blur leve so pra reduzir ruido/artefato de JPEG antes do sharpen
-ART_UNSHARP_RADIUS = 2
-ART_UNSHARP_PERCENT = 120   # realca bordas (oculos, nariz, contorno da barba)
-ART_AUTOCONTRAST_CUTOFF = 1  # curva suave: preserva gradacao nos tons medios (evita saturar em # % @)
 
 FONT_SIZE = 14
 CHAR_W = 8.4          # largura aproximada de um caractere monoespacado a FONT_SIZE=14 (Consolas-like)
 LINE_H = 15            # espacamento vertical entre linhas -> mantem a proporcao usada na ASCII art
-ART_X = 15
-GUTTER = 20
-SPECS_X = ART_X + ART_COLS * CHAR_W + GUTTER
+SPECS_X = 20
 MARGIN_RIGHT = 20
 
 # Paleta pedida: labels em amarelo/dourado, valores em azul claro, separadores em cinza
@@ -196,43 +178,6 @@ def collect_github_stats(username):
 # Foto -> ASCII art
 # --------------------------------------------------------------------------
 
-def fetch_avatar(username):
-    r = requests.get(f"https://github.com/{username}.png", params={"size": 460}, timeout=30)
-    r.raise_for_status()
-    return Image.open(io.BytesIO(r.content)).convert("RGB")
-
-
-def image_to_ascii(img, cols=ART_COLS, aspect=ART_ASPECT_CORRECTION):
-    gray = img.convert("L")
-    # blur leve (reduz ruido) seguido de sharpen (define bordas: oculos, nariz, barba)
-    gray = gray.filter(ImageFilter.GaussianBlur(radius=ART_BLUR_RADIUS))
-    gray = gray.filter(
-        ImageFilter.UnsharpMask(radius=ART_UNSHARP_RADIUS, percent=ART_UNSHARP_PERCENT, threshold=2)
-    )
-    # autocontraste UNICO e suave: aplicar duas vezes (uma no tamanho original, outra
-    # depois do resize) "estourava" tons medios do rosto em caracteres densos cedo demais
-    gray = ImageOps.autocontrast(gray, cutoff=ART_AUTOCONTRAST_CUTOFF)
-
-    rows = round(gray.height / gray.width * cols * aspect)
-    small = gray.resize((cols, rows), Image.LANCZOS)
-    pixels = small.load()
-
-    n = len(RAMP)
-    lines = []
-    for y in range(rows):
-        line = []
-        for x in range(cols):
-            lum = pixels[x, y]
-            idx = n - 1 - min(n - 1, int(lum / 256 * n))
-            line.append(RAMP[idx])
-        lines.append("".join(line))
-    return lines
-
-
-# --------------------------------------------------------------------------
-# Specs (conteudo estatico + campos dinamicos com id, no estilo do today.py)
-# --------------------------------------------------------------------------
-
 def build_specs(stats):
     sep = "-" * 40
     return [
@@ -292,17 +237,12 @@ def _line_char_len(label, value):
     return len(prefix) + len(value)
 
 
-def render_svg(art_lines, specs, palette):
-    n_lines = max(len(art_lines), len(specs))
+def render_svg(specs, palette):
+    n_lines = len(specs)
     max_chars = max(_line_char_len(label, value) for label, value, _ in specs)
     width = round(SPECS_X + max_chars * CHAR_W) + MARGIN_RIGHT
     # linha do cabecalho (usuario@github + separador) soma +1 acima do restante
     height = 30 + n_lines * LINE_H + 20
-
-    art_tspans = []
-    for i, line in enumerate(art_lines):
-        y = 30 + i * LINE_H
-        art_tspans.append(f'<tspan x="{ART_X}" y="{y}">{esc(line)}</tspan>')
 
     spec_tspans = []
     for i, (label, value, elem_id) in enumerate(specs):
@@ -338,9 +278,6 @@ def render_svg(art_lines, specs, palette):
 text, tspan {{white-space: pre;}}
 </style>
 <rect width="{width}px" height="{height}px" fill="{palette["bg"]}" rx="12"/>
-<text x="{ART_X}" y="30" fill="{palette["text"]}">
-{chr(10).join(art_tspans)}
-</text>
 <text x="{SPECS_X}" y="30" fill="{palette["text"]}">
 {chr(10).join(spec_tspans)}
 </text>
@@ -362,26 +299,15 @@ def main():
     except Exception as exc:  # pragma: no cover - fallback defensivo
         print(f"Aviso: falha ao buscar estatisticas do GitHub ({exc}). Usando valores em cache.", file=sys.stderr)
         stats = {
-            "repos": 18, "followers": 7, "following": 13,
-            "stars": 0, "forks": 0, "commits": 232,
+            "repos": 41, "followers": 7, "following": 14,
+            "stars": 0, "forks": 0, "commits": 2163,
             "avatar_url": f"https://github.com/{USER_NAME}.png",
         }
 
-    try:
-        avatar = fetch_avatar(USER_NAME)
-        art_lines = image_to_ascii(avatar)
-    except Exception as exc:  # pragma: no cover - fallback defensivo
-        print(f"Aviso: falha ao converter avatar em ASCII ({exc}). Mantendo arte em cache.", file=sys.stderr)
-        with open("ascii_cache.txt") as f:
-            art_lines = f.read().splitlines()
-    else:
-        with open("ascii_cache.txt", "w") as f:
-            f.write("\n".join(art_lines))
-
     specs = build_specs(stats)
 
-    dark_svg = render_svg(art_lines, specs, DARK)
-    light_svg = render_svg(art_lines, specs, LIGHT)
+    dark_svg = render_svg(specs, DARK)
+    light_svg = render_svg(specs, LIGHT)
 
     with open("dark_mode.svg", "w", encoding="utf-8") as f:
         f.write(dark_svg)

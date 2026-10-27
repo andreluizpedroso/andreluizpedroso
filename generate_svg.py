@@ -127,7 +127,55 @@ def get_commit_count(username, repo):
         return 0
 
 
+def get_authenticated_user(username):
+    """Retorna /user se o token for um PAT do proprio usuario (ve repos privados); senao None."""
+    if not os.environ.get("ACCESS_TOKEN"):
+        return None
+    try:
+        me = api_get(f"{API_ROOT}/user").json()
+    except requests.HTTPError:
+        return None
+    return me if me.get("login", "").lower() == username.lower() else None
+
+
+def get_all_repos_authenticated():
+    """Todos os repos do proprio usuario (publicos + privados) via /user/repos."""
+    repos, page = [], 1
+    while True:
+        r = api_get(
+            f"{API_ROOT}/user/repos",
+            params={"per_page": 100, "page": page, "visibility": "all", "affiliation": "owner"},
+        )
+        chunk = r.json()
+        if not chunk:
+            break
+        repos.extend(chunk)
+        if len(chunk) < 100:
+            break
+        page += 1
+    return repos
+
+
 def collect_github_stats(username):
+    me = get_authenticated_user(username)
+    if me:
+        user = me
+        repos = get_all_repos_authenticated()
+        total_stars = sum(r.get("stargazers_count", 0) for r in repos)
+        total_forks = sum(r.get("forks_count", 0) for r in repos)
+        total_commits = sum(get_commit_count(username, r["name"]) for r in repos if not r.get("fork"))
+        print(f"Modo autenticado: {len(repos)} repos (publicos + privados).")
+        return {
+            "repos": len(repos),
+            "followers": user.get("followers", 0),
+            "following": user.get("following", 0),
+            "stars": total_stars,
+            "forks": total_forks,
+            "commits": total_commits,
+            "avatar_url": user.get("avatar_url"),
+        }
+
+    print("Modo publico: sem ACCESS_TOKEN pessoal, contando apenas repos publicos.")
     user = get_user(username)
     repos = get_all_repos(username)
     total_stars = sum(r.get("stargazers_count", 0) for r in repos)

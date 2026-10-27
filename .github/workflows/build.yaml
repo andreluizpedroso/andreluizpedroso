@@ -28,6 +28,7 @@ jobs:
       - name: Generate SVGs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}  # PAT pessoal (opcional) p/ incluir repos privados
           USER_NAME: andreluizpedroso
         run: python generate_svg.py
 

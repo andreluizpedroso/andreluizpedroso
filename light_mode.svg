@@ -1,49 +1,51 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="Consolas,'SFMono-Regular','Courier New',monospace" width="662px" height="605px" font-size="14px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Consolas,'SFMono-Regular','Courier New',monospace" width="662px" height="635px" font-size="14px">
 <style>
 .key {fill: #9a6700;}
 .value {fill: #0969da;}
 .cc {fill: #6e7681;}
 text, tspan {white-space: pre;}
 </style>
-<rect width="662px" height="605px" fill="#ffffff" rx="12"/>
+<rect width="662px" height="635px" fill="#ffffff" rx="12"/>
 <text x="20" y="30" fill="#24292f">
 <tspan x="20" y="30">andreluizpedroso@github</tspan>
 <tspan x="20" y="45" class="cc">----------------------------------------</tspan>
 <tspan x="20" y="60" class="key">OS</tspan><tspan class="cc">: </tspan><tspan class="value">Machine Learning Engineer | AI Engineering &amp; LLMs | MLOps</tspan>
-<tspan x="20" y="75" class="key">Host</tspan><tspan class="cc">: </tspan><tspan class="value">PrepAI (prepai.com.br) + Consultoria Independente (desde 2013)</tspan>
+<tspan x="20" y="75" class="key">Host</tspan><tspan class="cc">: </tspan><tspan class="value">PrepAI (prepai.com.br) + Independent Consulting (since 2013)</tspan>
 <tspan x="20" y="90" class="key">Kernel</tspan><tspan class="cc">: </tspan><tspan class="value">Python 3.x | SQL | TypeScript | R</tspan>
-<tspan x="20" y="105" class="key">Uptime</tspan><tspan class="cc">: </tspan><tspan class="value">10+ anos de experiencia em dados</tspan>
+<tspan x="20" y="105" class="key">Uptime</tspan><tspan class="cc">: </tspan><tspan class="value">10+ years in data</tspan>
 <tspan x="20" y="120" class="key">Shell</tspan><tspan class="cc">: </tspan><tspan class="value">FastAPI + Docker + Kubernetes</tspan>
 <tspan x="20" y="135" class="key">DE</tspan><tspan class="cc">: </tspan><tspan class="value">dbt | Airflow | Spark | Data Lakehouse</tspan>
 <tspan x="20" y="150" class="key">MLOps</tspan><tspan class="cc">: </tspan><tspan class="value">MLflow | CI/CD | Evidently AI | Feast</tspan>
 <tspan x="20" y="165" class="key">Cloud</tspan><tspan class="cc">: </tspan><tspan class="value">GCP (BigQuery, Vertex AI) | AWS (SageMaker) | Azure ML | Databricks</tspan>
 <tspan x="20" y="180" class="key">ML/DL</tspan><tspan class="cc">: </tspan><tspan class="value">Scikit-learn | TensorFlow | PyTorch | XGBoost | LightGBM</tspan>
-<tspan x="20" y="195" class="key">GenAI</tspan><tspan class="cc">: </tspan><tspan class="value">LLMs | Roteamento multimodelo | Guardrails | Agentes | MCP</tspan>
+<tspan x="20" y="195" class="key">GenAI</tspan><tspan class="cc">: </tspan><tspan class="value">LLMs | Multi-model routing | Guardrails | AI agents | MCP</tspan>
 <tspan x="20" y="210" class="key">BI</tspan><tspan class="cc">: </tspan><tspan class="value">Power BI | Looker Studio | Metabase</tspan>
-<tspan x="20" y="225" class="key">Languages</tspan><tspan class="cc">: </tspan><tspan class="value">Portugues (nativo) | Ingles (C2 Fluente)</tspan>
-<tspan x="20" y="240" class="key">Locale</tspan><tspan class="cc">: </tspan><tspan class="value">Barueri, SP, Brasil</tspan>
+<tspan x="20" y="225" class="key">Languages</tspan><tspan class="cc">: </tspan><tspan class="value">Portuguese (native) | English (C2 Proficient)</tspan>
+<tspan x="20" y="240" class="key">Locale</tspan><tspan class="cc">: </tspan><tspan class="value">Barueri, SP, Brazil</tspan>
 <tspan x="20" y="255" class="cc">----------------------------------------</tspan>
 <tspan x="20" y="270">Contact</tspan>
 <tspan x="20" y="285" class="key">Email</tspan><tspan class="cc">: </tspan><tspan class="value">andreluizp87@gmail.com</tspan>
 <tspan x="20" y="300" class="key">LinkedIn</tspan><tspan class="cc">: </tspan><tspan class="value">linkedin.com/in/andreluizpedroso</tspan>
 <tspan x="20" y="315" class="key">Portfolio</tspan><tspan class="cc">: </tspan><tspan class="value">portifolio-andre-pedroso.vercel.app</tspan>
 <tspan x="20" y="330" class="cc">----------------------------------------</tspan>
-<tspan x="20" y="345" class="key">Formacao</tspan><tspan class="cc">: </tspan><tspan class="value">Pos-Tech Machine Learning Engineering - FIAP (2025)</tspan>
-<tspan x="20" y="360" class="value">Pos-Tech Data Analytics - FIAP (2024)</tspan>
-<tspan x="20" y="375" class="value">Bacharel em Sistemas de Informacao - UNINOVE (2022)</tspan>
-<tspan x="20" y="390" class="value">Tecnologo em Seguranca da Informacao - UNINOVE (2015)</tspan>
-<tspan x="20" y="405" class="cc">----------------------------------------</tspan>
-<tspan x="20" y="420" class="key">Experiencia</tspan><tspan class="cc">: </tspan><tspan class="value">PrepAI - Founder &amp; AI Engineer (2026 - atual)</tspan>
-<tspan x="20" y="435" class="value">NIO Tecnologia - Senior Data Engineer (jul/2025 - jan/2026)</tspan>
-<tspan x="20" y="450" class="value">Kumon Brasil - Senior Data Analyst (nov/2023 - abr/2025)</tspan>
-<tspan x="20" y="465" class="value">ABAI Brasil (cliente PicPay) - Senior BI Analyst (jun/2023 - nov/2023)</tspan>
-<tspan x="20" y="480" class="value">Consultoria Independente - ML &amp; Data Engineering (desde 2013)</tspan>
-<tspan x="20" y="495" class="cc">----------------------------------------</tspan>
-<tspan x="20" y="510">GitHub Stats</tspan>
-<tspan x="20" y="525" class="key">Repos</tspan><tspan class="cc">: </tspan><tspan class="value" id="repo_data">41</tspan>
-<tspan x="20" y="540" class="value" id="star_data">Stars: 0 | Forks: 0</tspan>
-<tspan x="20" y="555" class="key">Commits</tspan><tspan class="cc">: </tspan><tspan class="value" id="commit_data">2238</tspan>
-<tspan x="20" y="570" class="value" id="follower_data">Followers: 7 | Following: 14</tspan>
+<tspan x="20" y="345" class="key">Education</tspan><tspan class="cc">: </tspan><tspan class="value">Postgrad in Machine Learning Engineering - FIAP (2025)</tspan>
+<tspan x="20" y="360" class="value">Postgrad in Data Analytics - FIAP (2024)</tspan>
+<tspan x="20" y="375" class="value">B.Sc. Information Systems - UNINOVE (2022)</tspan>
+<tspan x="20" y="390" class="value">Associate Degree in Information Security - UNINOVE (2015)</tspan>
+<tspan x="20" y="405" class="key">Certs</tspan><tspan class="cc">: </tspan><tspan class="value">MIT - Data Science and Big Data (2023)</tspan>
+<tspan x="20" y="420" class="value">Data Science Academy - Artificial Intelligence, 420h (2019)</tspan>
+<tspan x="20" y="435" class="cc">----------------------------------------</tspan>
+<tspan x="20" y="450" class="key">Experience</tspan><tspan class="cc">: </tspan><tspan class="value">PrepAI - Founder &amp; AI Engineer (2026 - present)</tspan>
+<tspan x="20" y="465" class="value">NIO Tecnologia - Senior Data Engineer (Jul 2025 - Jan 2026)</tspan>
+<tspan x="20" y="480" class="value">Kumon Brasil - Senior Data Analyst (Nov 2023 - Apr 2025)</tspan>
+<tspan x="20" y="495" class="value">ABAI Brasil (client PicPay) - Senior BI Analyst (Jun 2023 - Nov 2023)</tspan>
+<tspan x="20" y="510" class="value">Independent Consulting - ML &amp; Data Engineering (since 2013)</tspan>
+<tspan x="20" y="525" class="cc">----------------------------------------</tspan>
+<tspan x="20" y="540">GitHub Stats</tspan>
+<tspan x="20" y="555" class="key">Repos</tspan><tspan class="cc">: </tspan><tspan class="value" id="repo_data">43 (21 public)</tspan>
+<tspan x="20" y="570" class="value" id="star_data">Stars: 0 | Forks: 0</tspan>
+<tspan x="20" y="585" class="key">Commits</tspan><tspan class="cc">: </tspan><tspan class="value" id="commit_data">2312</tspan>
+<tspan x="20" y="600" class="value" id="follower_data">Followers: 8 | Following: 34</tspan>
 </text>
 </svg>

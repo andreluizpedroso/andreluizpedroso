@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 6 * * 1"  # toda segunda-feira as 06:00 UTC
+    - cron: "0 6 * * *"  # every day at 06:00 UTC
   workflow_dispatch: {}
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
       - name: Generate SVGs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}  # PAT pessoal (opcional) p/ incluir repos privados
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}  # personal PAT (optional) to count private repos
           USER_NAME: andreluizpedroso
         run: python generate_svg.py
 
@@ -37,5 +37,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add dark_mode.svg light_mode.svg
-          git diff --cached --quiet && echo "Nada para commitar" || git commit -m "Atualiza README SVG"
+          git diff --cached --quiet && echo "Nothing to commit" || git commit -m "Update README SVG"
           git push
